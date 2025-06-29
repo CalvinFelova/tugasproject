@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BLOG SAYA</title>
+</head>
+<style>
+    *, html, body{
+    margin: 0;
+    padding: 0;
+    }
+
+    #trail {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        
+    }
+    .intro {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color:whitesmoke;
+        padding:30px;
+        font-size: 19px;
+        font-family: fantasy;
+       
+    }
+
+    #btn {
+        
+        width: 200px;
+        border: none;
+        padding:12px;
+        color:white;
+        background-color: red;
+        font-weight: 900;
+        font-size: 18px;
+        margin-top: 20px;
+        cursor:pointer;
+        
+    }
+
+    .btn-halaman{
+        width: 200px;
+        border: none;
+        padding:12px;
+        color:white;
+        background-color: red;
+        
+        font-size: 18px;
+        margin-top: 20px;
+        cursor:pointer;
+    }
+
+    .bt-a{
+        color:white;
+        font-weight: 900;
+        text-decoration: none;
+    }
+
+</style>
+
+<body>
+    
+    <video autoplay muted  loop id="trail">
+        <source src="asset/Rich Brian - Trespass.mp4" type="video/mp4">
+    </video>
+    <div class="intro">
+        <center>
+        <h1>WELCOME BREE</h1>
+        <P>Terima kasih telah mengunjungi blog terbaru saya yang satu ini Anda
+            boleh memainkannyaaa
+        </P>
+        <button id="btn" onclick="triggerbtn()">PAUSE</button>
+        <button class="btn-halaman"><a href="website.html" class="bt-a">Kembali</a></button>
+    </center>
+    </div>
+    <script>
+        const trail = document.getElementById("trail")
+        const btn = document.getElementById("btn")
+        function triggerbtn() {
+            if(trail.paused) {
+                trail.play()
+                btn.innerHTML = "PAUSE"
+            }else{
+                trail.pause()
+                btn.innerHTML = "PLAY"
+            }
+        }
+    </script>
+
+</body>
+</html>
